@@ -173,7 +173,7 @@ $('form').on('submit', function (e) {
                 } else {
                     launchCommandAsVisitor({
                         cmd: vInput,
-                        res: '<div><p>2lag: ' + vInput + ': No such file or directory</p></div>'
+                        res: '<div><p>endyou: ' + vInput + ': No such file or directory</p></div>'
                     });
                 }
             } else if (vInput.startsWith("cd ") || vInput === "cd" || vInput.startsWith("mkdir ") || vInput === "mkdir" || vInput.startsWith("touch ") || vInput === "touch" || vInput.startsWith("rm ") || vInput === "rm" || vInput === "ls") {
@@ -194,7 +194,7 @@ $('form').on('submit', function (e) {
                             res = '';
                         }
                     } else {
-                        res = '2lag: No passwd entry for user ' + loginArray[2] + '';
+                        res = 'endyou: No passwd entry for user ' + loginArray[2] + '';
                     }
                     launchCommandAsVisitor({
                         cmd: loginArray[0] + ' ' + loginArray[2],
@@ -255,7 +255,7 @@ $('form').on('submit', function (e) {
                 } else {
                     launchCommandAsVisitor({
                         cmd: vInput,
-                        res: '<div><p>[ <span class="red">2lag</span> ] Usage: music [play/stop/link]</p></div>'
+                        res: '<div><p>[ <span class="red">endyou</span> ] Usage: music [play/stop/link]</p></div>'
                     });
                 }
             } else if (vInput.startsWith("insta")) {
@@ -285,7 +285,7 @@ $('form').on('submit', function (e) {
                 const Disk = '1TB';
                 launchCommandAsVisitor({
                     cmd: $('input').val(),
-                    res: '&#x2002&#x2002SSSSSSSSSSSSSSS&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002<span class="red">visitor@2lag</span><br>&#x2002S:::::::::::::::S&#x2002&#x2002&#x2002&#x2002&#x2002<span class="red">OS:</span> Arch Linux ' + OSVer + '<br>S:::::SSSSSS::::::S&#x2002&#x2002&#x2002&#x2002<span class="red">Kernel:</span> ' + Kernel + '<br>SSSSSSS&#x2002&#x2002&#x2002&#x2002&#x2002S:::::S&#x2002&#x2002&#x2002&#x2002<span class="red">Uptime:</span> ' + upTime + '<br>&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002S:::::S&#x2002&#x2002&#x2002&#x2002<span class="red">Shell:</span> ' + Shell + '<br>&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002S:::::S&#x2002&#x2002&#x2002&#x2002<span class="red">Disk:</span> ' + Disk + '<br>&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002SSSS::::S<br>&#x2002&#x2002&#x2002&#x2002&#x2002SSSSS::::::SS<br>&#x2002&#x2002&#x2002&#x2002SS::::::::SSS<br>&#x2002&#x2002S:::::SSSSSS<br>S:::::S<br>S:::::S<br>S:::::S&#x2002&#x2002&#x2002&#x2002&#x2002SSSSSSS<br>S:::::SSSSSS::::::S<br>SS:::::::::::::::S<br>&#x2002SSSSSSSSSSSSSSS</p></div>'
+                    res: '&#x2002&#x2002SSSSSSSSSSSSSSS&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002<span class="red">visitor@endyou</span><br>&#x2002S:::::::::::::::S&#x2002&#x2002&#x2002&#x2002&#x2002<span class="red">OS:</span> Arch Linux ' + OSVer + '<br>S:::::SSSSSS::::::S&#x2002&#x2002&#x2002&#x2002<span class="red">Kernel:</span> ' + Kernel + '<br>SSSSSSS&#x2002&#x2002&#x2002&#x2002&#x2002S:::::S&#x2002&#x2002&#x2002&#x2002<span class="red">Uptime:</span> ' + upTime + '<br>&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002S:::::S&#x2002&#x2002&#x2002&#x2002<span class="red">Shell:</span> ' + Shell + '<br>&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002S:::::S&#x2002&#x2002&#x2002&#x2002<span class="red">Disk:</span> ' + Disk + '<br>&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002&#x2002SSSS::::S<br>&#x2002&#x2002&#x2002&#x2002&#x2002SSSSS::::::SS<br>&#x2002&#x2002&#x2002&#x2002SS::::::::SSS<br>&#x2002&#x2002S:::::SSSSSS<br>S:::::S<br>S:::::S<br>S:::::S&#x2002&#x2002&#x2002&#x2002&#x2002SSSSSSS<br>S:::::SSSSSS::::::S<br>SS:::::::::::::::S<br>&#x2002SSSSSSSSSSSSSSS</p></div>'
                 });
             } else if (vInput.trim() !== "") {
                 launchCommandAsVisitor(commands[vInput]);
@@ -295,12 +295,12 @@ $('form').on('submit', function (e) {
         if (root > 0) {
             launchCommandAsRoot({
                 cmd: $('input').val(),
-                res: '<div><p>2lag: ' + $('input').val() + ': command not found</p></div>'
+                res: '<div><p>endyou: ' + $('input').val() + ': command not found</p></div>'
             });
         } else {
             launchCommandAsVisitor({
                 cmd: $('input').val(),
-                res: '<div><p>2lag: ' + $('input').val() + ': command not found</p></div>'
+                res: '<div><p>endyou: ' + $('input').val() + ': command not found</p></div>'
             });
         }
         if ($('input').val() === 'clear') {
