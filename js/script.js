@@ -112,8 +112,8 @@ const commands = {
     }
 }
 
-var prephraseRoot = '<span class="red">root@endyou</span>:<span class="blue">~</span># ';
-var prephrase = '<span class="red">visitor@endyou</span>:<span class="blue">~</span># ';
+var prephraseRoot = '<span class="white">root</span><span class="red">@endyou</span>:<span class="green">~</span># ';
+var prephrase = '<span class="white">visitor</span><span class="red">@endyou</span>:<span class="green">~</span># ';
 
 var form = $('<div style="width: 100%;display: table"><div style="display: table-cell; width: 1%">' + prephrase + '</div>&nbsp<form id="form" style="display: table-cell; width :100%"><input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" id="tCommand" type="text" maxlength="48" class="nostyle" autofocus /></form></div>').appendTo('#content');
 
@@ -125,7 +125,7 @@ function OnlyRoot(command) {
 
 function launchCommandAsRoot(command) {
     var res = '';
-    if (command === './welcome.sh') res = 'Welcome to <span class="red">endyou.net</span>!<br><br>Made By:</span><span class="red"> endyou</span><br>Total Visits: <span class="red">16245</span> <height="15px" border="0"></img><span class="red">' + '</span><br>Terminal Updated: <span class="red">' + lastUpdate + '</span><br><br><b>Type \'help\' for more details on the commands</b>'
+    if (command === '/welcome') res = '<br>Welcome to <span class="red">endyou.net</span>!<br><br>Made By:</span ><span class="red"> worstpart & shybeing</span><br>Total Visits: <span class="red">16245</span> <height="15px" border="0"></img><span class="red">' + '</span><br>Terminal Updated: <span class="red">' + lastUpdate + '</span><br><br><b>Type <span class="green">\'help\'</span> for more details on the commands</b>'
     else {
         window.alert("Nice try to changing \'root\' variable to 1");
         window.location = "https://youtu.be/LDU_Txk06tM?t=75";
@@ -139,7 +139,7 @@ function launchCommandAsVisitor(command) {
     $('<div>' + prephrase + command.cmd + '<p>' + command.res + '</p></div>').insertBefore(form)
 }
 
-launchCommandAsRoot('./welcome.sh');
+launchCommandAsRoot('/welcome');
 
 $('#content').niceScroll({
     cursorcolor: '#303030',
@@ -246,7 +246,7 @@ $('form').on('submit', function (e) {
                         });
                     }
                 } else if (vInput === "music link") {
-                    var win = window.open("https://www.youtube.com/watch?v=xpPWNOhJtqs", "_blank");
+                    var win = window.open("https://www.youtube.com/watch?v=uLxD4ozDPZA&feature=youtu.be", "_blank");
                     win.focus();
                     launchCommandAsVisitor({
                         cmd: vInput,
