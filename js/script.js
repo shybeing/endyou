@@ -86,17 +86,17 @@ pJessie.loop = false;
 
 var sMonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December", ] //i think we all know the months of the year
 const commands = {
-    filler: {
-        cmd: 'fillercmd',
-        res: 'filler'
+    members: {
+        cmd: 'members',
+        res: 'Founder:<br># <span class="red">shybeing</span><br><br>Members:<br># <span class="red">worstpart</span><br># <span class="red">honeymoon</span><br># <span class="red">bluntly</span><br># <span class="red">keru</span><br># <span class="red">jordo</span><br># <span class="red">rocky</span><br># <span class="red">luxzury</span><br>'
     },
     filler2: {
         cmd: 'fillercmd2',
         res: 'MORE FILLER BECAUSE IM LACKING CREATIVITY RIGHT NOW t-t'
     },
-    aboutme: {
-        cmd: 'aboutme',
-        res: 'About Me:<br># <span class="red">Name:</span> Aiden H<br># <span class="red">Born:</span> ' + sMonth["2"] + ' 2002 <span class="red">(Age: ' + GetAge("2002-03-21") + ')</span><br># <span class="red">Country:</span> United States<br><br><span class="red">Bio:</span><br><span class="pink">Recently graduated student with an Associate\'s of<br>Applied Science in Software Development. Work experience<br>in IT and retail, plus educational and personal exposure<br>with programming of all sorts (web apps, smart contracts,<br>application development, etc.)<br></span><br># <span class="red">Skills:</span> Programming, Graphic Design, Video Editing, 3D Modeling.<br></span><br># <span class="red">Programming:</span> HTML, CSS, JS, C++, C#, PYTHON, JAVA, PROCESSING, SOLIDITY.<br></span><br><span class="red">Languages:</span><br>* English - <span class="red">Native</span><br>* Hebrew - <span class="red">Intermediate</span><br>* Spanish - <span class="red">Basic</span><br>* Japanese - <span class="red">Beginner</span><br>'
+    about: {
+        cmd: 'about',
+        res: 'About Us:<br># <span class="red">Name:</span> Aiden H<br># <span class="red">Born:</span> ' + sMonth["2"] + ' 2002 <span class="red">(Age: ' + GetAge("2002-03-21") + ')</span><br># <span class="red">Country:</span> United States<br><br><span class="red">Bio:</span><br><span class="pink">Recently graduated student with an Associate\'s of<br>Applied Science in Software Development. Work experience<br>in IT and retail, plus educational and personal exposure<br>with programming of all sorts (web apps, smart contracts,<br>application development, etc.)<br></span><br># <span class="red">Skills:</span> Programming, Graphic Design, Video Editing, 3D Modeling.<br></span><br># <span class="red">Programming:</span> HTML, CSS, JS, C++, C#, PYTHON, JAVA, PROCESSING, SOLIDITY.<br></span><br><span class="red">Languages:</span><br>* English - <span class="red">Native</span><br>* Hebrew - <span class="red">Intermediate</span><br>* Spanish - <span class="red">Basic</span><br>* Japanese - <span class="red">Beginner</span><br>'
     },
     links: {
         cmd: 'links',
@@ -112,8 +112,8 @@ const commands = {
     }
 }
 
-var prephraseRoot = '<span class="white">root</span><span class="red">@endyou</span>:<span class="green">~</span># ';
-var prephrase = '<span class="white">visitor</span><span class="red">@endyou</span>:<span class="green">~</span># ';
+var prephraseRoot = '<span class="white">root</span><span class="red">@endyou</span>:<span class="green">~</span>/ ';
+var prephrase = '<span class="white">visitor</span><span class="red">@endyou</span>:<span class="green">~</span>/ ';
 
 var form = $('<div style="width: 100%;display: table"><div style="display: table-cell; width: 1%">' + prephrase + '</div>&nbsp<form id="form" style="display: table-cell; width :100%"><input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" id="tCommand" type="text" maxlength="48" class="nostyle" autofocus /></form></div>').appendTo('#content');
 
@@ -125,7 +125,7 @@ function OnlyRoot(command) {
 
 function launchCommandAsRoot(command) {
     var res = '';
-    if (command === '/welcome') res = '<br>Welcome to <span class="red">endyou.net</span>!<br><br>Made By:</span ><span class="red"> worstpart & shybeing</span><br>Total Visits: <span class="red">16245</span> <height="15px" border="0"></img><span class="red">' + '</span><br>Terminal Updated: <span class="red">' + lastUpdate + '</span><br><br><b>Type <span class="green">\'help\'</span> for more details on the commands</b>'
+    if (command === 'motd') res = '<br>Welcome to <span class="red">endyou.net</span>!<br><br>Site By:</span ><span class="red"> <a href="http://www.worstpart.xyz/" target="_blank">worstpart</a> & <a href="https://www.youtube.com/shybeing" target="_blank">shybeing</a></span><br>Total Visits: <span class="red">16245</span> <height="15px" border="0"></img><span class="red">' + '</span><br>Terminal Updated: <span class="red">' + lastUpdate + '</span><br><br><b>Type <span class="green">\'help\'</span> for more details on the commands</b>'
     else {
         window.alert("Nice try to changing \'root\' variable to 1");
         window.location = "https://youtu.be/LDU_Txk06tM?t=75";
@@ -139,7 +139,7 @@ function launchCommandAsVisitor(command) {
     $('<div>' + prephrase + command.cmd + '<p>' + command.res + '</p></div>').insertBefore(form)
 }
 
-launchCommandAsRoot('/welcome');
+launchCommandAsRoot('motd');
 
 $('#content').niceScroll({
     cursorcolor: '#303030',
