@@ -104,7 +104,7 @@ const commands = {
     },
     help: {
         cmd: 'help',
-        res: 'Available commands:<br><br># <span class="red">aboutme</span> - Some information about me.<br># <span class="red">clear</span> - Clears console. <br># <span class="red">systeminfo</span> - Fetches system information in the terminal.<br># <span class="red">links</span> - Other socials.<br># <span class="red">visitors</span> - How many times people visited this site.<br># <span class="red">music</span> - Usage: music [play/stop/link]<br># <span class="red">jessie</span> - Yoyoyo 148 3 to the 3 to the 6 to the 9'
+        res: 'Available commands:<br><br># <span class="red">aboutme</span> - Some information about me.<br># <span class="red">clear</span> - Clears console. <br># <span class="red">systeminfo</span> - Fetches system information in the terminal.<br># <span class="red">links</span> - Other socials.<br># <span class="red">music</span> - Usage: music [play/stop]'
     }
 }
 
@@ -204,13 +204,7 @@ $('form').on('submit', function (e) {
                         res: '<div><p>' + res + '</p></div>'
                     });
                 }
-            } else if (vInput === "jessie") {
-                pJessie.load();
-                pJessie.play();
-                launchCommandAsVisitor({
-                    cmd: vInput,
-                    res: '<div><p>[ <span class="green">SUCCESS</span> ] Jessie playing!</p></div>'
-                });
+
             } else if (vInput.startsWith("music")) {
                 if (vInput === "music play") {
                     if (pMusicPlaying == 1) {
@@ -251,7 +245,7 @@ $('form').on('submit', function (e) {
                 } else {
                     launchCommandAsVisitor({
                         cmd: vInput,
-                        res: '<div><p>[ <span class="red">endyou</span> ] Usage: music [play/stop/link]</p></div>'
+                        res: '<div><p>[ <span class="red">endyou</span> ] Usage: music [play/stop]</p></div>'
                     });
                 }
             } else if (vInput.startsWith("insta")) {
