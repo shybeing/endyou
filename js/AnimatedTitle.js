@@ -1,7 +1,7 @@
 ﻿var rev = "fwd";
 
 function titlebar(val) {
-    var msg = "endyou;*-+(╥_╥)";
+    var msg = "endyou;*-+(ಥ﹏ಥ)* -+;⁶₆⁶(७७७)"
     var res = " ";
     var speed = 250;
     var pos = val;

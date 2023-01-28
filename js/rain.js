@@ -2,7 +2,7 @@ var makeItRain = function() {
   //clear
   $('.rain').empty();
 
-  var increment = 0;
+  var increment = 1;
   var drops = "";
   var backDrops = "";
 
