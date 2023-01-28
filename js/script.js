@@ -113,7 +113,7 @@ const commands = {
 }
 
 var prephraseRoot = '<span class="white">root</span><span class="red">@endyou</span>:<span class="green">~</span>/ ';
-var prephrase = '<span class="white">visitor</span><span class="red">@endyou</span>:<span class="green">~</span>/ ';
+var prephrase = '<span class="white">user</span><span class="red">@endyou</span>:<span class="green">~</span>/ ';
 
 var form = $('<div style="width: 100%;display: table"><div style="display: table-cell; width: 1%">' + prephrase + '</div>&nbsp<form id="form" style="display: table-cell; width :100%"><input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" id="tCommand" type="text" maxlength="48" class="nostyle" autofocus /></form></div>').appendTo('#content');
 
