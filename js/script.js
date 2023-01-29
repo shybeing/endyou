@@ -104,7 +104,7 @@ const commands = {
     },
     help: {
         cmd: 'help',
-        res: 'Available commands:<br><br># <span class="red">aboutme</span> - Some information about me.<br># <span class="red">clear</span> - Clears console. <br># <span class="red">systeminfo</span> - Fetches system information in the terminal.<br># <span class="red">links</span> - Other socials.<br># <span class="red">music</span> - Usage: music [play/stop]'
+        res: 'Available commands:<br><br># <span class="red">about</span> - Some information about me.<br># <span class="red">clear</span> - Clears console. <br># <span class="red">systeminfo</span> - Fetches system information in the terminal.<br># <span class="red">links</span> - Other socials.<br># <span class="red">music</span> - Usage: music [play/stop]'
     }
 }
 
